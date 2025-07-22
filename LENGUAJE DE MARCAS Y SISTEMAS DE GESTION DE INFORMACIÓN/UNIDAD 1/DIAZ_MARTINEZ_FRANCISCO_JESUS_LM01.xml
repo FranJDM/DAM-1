@@ -1,0 +1,94 @@
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+ <!-- En este documento se ha confeccionado una relación entre paquetes y repartidores para optimizar y registrar todos los datos relevantes al respecto durante un supuesto "Dia 1" en el que dentro hay otro apartado llamado "registro_jornada(1)". Dicho esto se ha optado por una distribución de TRES repartidores con un número de paquetes variable, entendiendo el "paquete" que se menciona en el ejercicio como una entrega de bultos para enriquecer el documento.
+ 
+Se ha optado por organizar los elementos en este orden: Repartidor(NumeroX)>Vehiculo(NumeroX)>Paquete(NumeroX) dando correlacion a todos los repartidores con sus vehiculos y paquetes, pero presentando una numeracion que fuera hipoteticamente facil de organizar para el gestor de la empresa. Se ha usado la etiqueta "root" para poder ser visto en el navegador Microsoft Edge -->
+
+<!DOCTYPE registro>
+
+<h1>Día 1</h1>
+<root>
+<registro>
+<registro_jornada número="1">
+<repartidor número="1">
+    <nombre_apellidos> Francisco Eusebio Montes</nombre_apellidos>
+    <teléfono>987099878</teléfono>
+    <jornada unidad="horas">8</jornada>
+       <vehículo_asignado número="1">
+        <modelo>Chevrolet</modelo>
+        <matricula>7645KDV</matricula>
+        <capacidad unidad="kg">900</capacidad>
+        <kilómetros unidad="km">54.000</kilómetros>
+    </vehículo_asignado>
+        <paquete número="1">
+        <bultos cantidad="2"> Sobre Azul 0.5kg </bultos> 
+         <identificación>1556H1H123KO5PAS</identificación>
+         <intento-entrega número="1"> Ausente </intento-entrega>
+         <peso unidad="kg">9</peso>
+         <destinatario tipo="particular">Ildefonso Alonsinez Lirola</destinatario>
+         <nif>12343512K</nif>
+         <contacto>
+             <teléfono prefijo="0">987564361</teléfono>
+             <mail>ildefonso@gmail.com</mail>
+             </contacto>
+         <dirección>Carretera Sierra Altamira 10</dirección>
+         <observaciones>El portero está roto</observaciones>
+    </paquete>
+    </repartidor>
+ 
+<repartidor número="2">
+    <nombre_apellidos> Eduardo Montoya Inigo</nombre_apellidos>
+    <teléfono>876453423</teléfono>
+    <jornada unidad="horas">7</jornada>
+        <vehiculo_asignado número="2">
+        <modelo>Hyundai</modelo>
+        <matricula>7985HGV</matricula>
+        <capacidad unidad="kg">900</capacidad>
+        <kilometros unidad="km">11.000 </kilometros>
+    </vehiculo_asignado>
+        <paquete número="2">
+        <bultos cantidad="1"> Caja 2x2x1m </bultos> 
+         <identificación>1556H1645OLLAS</identificación>
+         <intento-entrega número="3"> Entregado </intento-entrega>
+         <peso unidad="kg">0.5</peso>
+         <destinatario tipo="particular">Bonifacio Rodiguez Cam</destinatario>
+         <nif>324551661K</nif>
+         <contacto>
+             <teléfono prefijo="+33">234556361</teléfono>
+             <mail>no especificado</mail>
+             </contacto>
+         <dirección>Carretera Lindelai 3, Piso 198</dirección>
+         <observaciones>Dejar los bultos en el buzón</observaciones>
+    </paquete>
+    </repartidor>
+
+<repartidor número="3">
+    <nombre_apellidos> Ecatombe Michel Miluni</nombre_apellidos>
+    <teléfono>987675412</teléfono>
+    <jornada unidad="horas">5</jornada>
+      <vehículo_asignado número="3">
+        <modelo>Peugeot</modelo>
+        <matricula>9812OPI</matricula>
+        <capacidad unidad="kg">900</capacidad>
+        <kilometros unidad="km">14.000</kilometros>
+    </vehículo_asignado>
+        <paquete número="3">
+        <bultos cantidad="15"> Sobres de seguridad </bultos> 
+         <identificación>123POIOIJ3KO5PAS</identificación>
+         <intento-entrega número="1"> Entregado </intento-entrega>
+         <peso unidad="kg">2.5</peso>
+         <destinatario tipo="empresa">SAINZ ELECTRONICA S.A</destinatario>
+         <nif>901237565C</nif>
+         <contacto>
+             <teléfono prefijo="+34">607457301</teléfono>
+             <mail>sainz@electro.com</mail>
+             </contacto>
+         <dirección>Poligono Industrial La Juaida, 90</dirección>
+         <observaciones>En caso de ausencia entregar en la nave que se encuentra a la izquierda</observaciones>
+    </paquete>
+    </repartidor>
+ </registro_jornada> 
+    </registro>
+</root>   
+

@@ -1,0 +1,159 @@
+body{
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+header{
+    display: flex;
+    background-image: linear-gradient(to bottom, #ffffff, #fbfbfb, #f6f6f6, #f2f2f2, #eeeeee);
+    padding: 10px;
+    align-items: center;    
+}
+
+/* Establecemos el aspecto general de la web, color, fuente y color de la misma*/
+main {
+color:rgb(0, 0, 0);
+background: rgb(2,0,36);
+background-color: aliceblue;
+font-family: sans-serif;
+}
+
+/* A continuación los ajustes generales del menú de navegación*/
+
+nav {
+  background-color: #e0e0e0;
+ display: flex;
+ justify-content: space-between; 
+ align-items: center;   
+}
+
+nav img {
+  height: 60px;
+  margin-right: 929px;   
+}
+
+nav a {
+padding: 20px; 
+margin-left: 6px;
+border: 0.25px solid rgb(0, 0, 0); 
+text-decoration: none;
+transition: all 0.3s ease-in-out; /* Para la animación al pasar el ratón por enciam de cualquiera de las opciones
+del menú usamos la transición "ease-in-out", le indicamos que para todos los elementos y con una duración de
+0.3s */
+} 
+
+nav a:hover {
+  background-color: darkgrey;
+  color: white;
+  border-color: rgb(114, 222, 255);
+  
+}
+
+.first img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* Para las imágenes de los servicios alineamos los bloques y usamos un hover que transforma la escala
+de un estado A hacia un estado B mientras que el ratón permanezca encima*/
+
+.carusel {
+    display: flex;
+    flex-wrap: nowrap;  
+    text-decoration: solid; 
+    }
+.carusel img {
+    width: 320px;
+    height: 300px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+    }
+
+.carusel img:hover {
+    transform: scale(0.8);
+    }
+
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  /* En esta capa de estilo indicamos las medidas que debe de tener nuestro formulario, así como
+  la interacción que debe de tener el botón de enviar*/
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=button]:hover {
+    background-color: #45a049;
+  }
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  /* Definimos el espacio que puede ocupar el formulario */
+  .container {
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    padding: 100px;
+  }
+  
+  
+  .boton{
+    position: absolute;
+    right: 100px;
+  }
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+     /* Tanto arriba como abajo definimos que el campo que se va a completar queda a la derecha */
+
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Indicamos las interaciones de los tres bloques entre sí, a la hora de navegar entre ellos, así como
+el espacio que queremos que haya entre el contenido*/
+#op1, #op2, #op3{
+    height: 880px;
+    width: auto;
+}
+
+/* Por útlimo el footer, decidimos el formato que va a tener, y damos las instrucciones 
+para transformar la imágen que hemos usado al tamaño adecuado*/
+footer {
+    background-color: rgb(248, 248, 248);
+    bottom: 0px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+footer img{
+height: 50px;
+}

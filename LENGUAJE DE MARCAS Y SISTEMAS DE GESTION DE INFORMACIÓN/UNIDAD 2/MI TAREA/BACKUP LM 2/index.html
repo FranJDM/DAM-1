@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>Llegaya S.L</title>
+</head>
+<body>
+ <header>
+    <!-- Se crea una referencia interna con "#" para los tres bloques de contenido que se solicitan
+    posteriormente se añadirá una etiqueta "id" a cada uno de ellos para lograr la navegación-->
+    <nav>
+        <a href="#op1" class="#inicio">Inicio</a>
+        <a href="#op2" class="#servicio">Servicios</a>
+        <a href="#op3" class="#contacto">Contacto</a>
+            <img  src="im/mainlogo.png" alt="Logo legaya">
+    </nav>
+    
+</header>   
+<main>
+    <!-- Capa de Inicio por defecto -->
+    <div id="op1" class="first">
+      <div class="banner">
+        <img src="mainbanner.png" alt="Banner">
+      </div>
+      <p>Bienvenido a nuestra empresa. Ofrecemos servicios y productos de alta calidad para satisfacer las necesidades de nuestros clientes.</p>
+      <ol>
+        <li>Servicios
+          <ol>
+            <li>a Transporte urgente</li>
+            <li>b Transporte ordinario</li>
+          </ol>
+        </li>
+        <li>Productos
+          <ol>
+            <li>a Paquetes</li>
+            <li>b Sobres</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+
+  <!-- Capa de servicios, dividida en apartados para cada servicio/producto 
+he optado por la etiqueta "section" ya que es usada para definir bloques temáticos con encabezados h1-h6 -->
+  <section id="op2">
+    <h1>Servicios / Productos</h1>
+    <div class="carusel">
+      <div>
+        <img src="stup.jpg" alt="Servicio de transporte urgente peninsular" >
+        <p><strong>Servicio de transporte urgente peninsular</strong></p>
+      </div>
+      <div>
+        <img src="stut.webp" alt="Servicio de transporte urgente territorial">
+        <p><strong>Servicio de transporte urgente territorial</strong></p>
+      </div>
+      
+      <div>
+        <img src="cajas.jpg" alt="Paquetes">
+        <p> <strong>Paquetes</strong></p>
+      </div>
+      <div>
+        <img src="sobres.jpg" alt="Sobres">
+        <p><strong>Sobres</strong></p>
+      </div>
+    </section>
+
+    <!-- En el esqueleto del formulario se han añadido etiquetas name para en sun hipotético caso de uso
+    obtener los datos clasificados por su categoría  -->
+<section id="op3">
+    <h1>Formulario de contacto</h1>
+    <div class="container">
+        <form action="/action_page.php">
+        <div class="row">
+          <div class="col-25">
+            <label for="pnom">Nombre</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="pnom" name="primerNombre" placeholder="Tu nombre">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="mail">E-Mail</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="mail" name="correo" placeholder="Tu email">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+              <label for="movil">Teléfono</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="telf" name="telefono" placeholder="Teléfono fijo">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="mail">Ciudad</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad">
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="comments">Comentarios</label>
+          </div>
+          <div class="col-75">
+            <textarea id="comments" name="comments" placeholder="Escribe algo.." style="height:200px"></textarea>
+          </div>
+        </div>
+       <!-- En esta sección de botones, se han incluido tambien las "checkbox" para definir la forma
+    de contacto solicitada por el cliente -->
+        <div class="row">
+          <input type="button" class="boton" value="Enviar">
+        </div>
+        <div>
+        <p>Desea recibir respuesta por:</p>
+        <label><input type="checkbox"  value="mail"> E-mail</label><br>
+
+        <input type="checkbox"  value="telef"> <label for="cbox2">Teléfono</label>
+        </div>
+        </form>
+      </div>
+    </section>
+</main>
+<!-- En el footer está adjunto el logo de Creative Commons y el enlace para acceder a su web -->
+    <footer>
+        <p>Llegaya S.L</p> 
+        <P>Calle Legal 21,Almería</P>
+        <p>987123123, llegaya@info.com</p>
+        <p>Francisco Jesús Díaz Martínez</p>
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+            <img src="cc.xlarge.png" alt="Logotipo de Creative Commons" style="width:50px;">
+          </a>
+    </footer>
+
+</body>
+</html>

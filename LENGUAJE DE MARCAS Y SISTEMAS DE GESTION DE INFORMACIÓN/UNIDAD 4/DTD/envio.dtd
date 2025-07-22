@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!ELEMENT envio (emisor,intento*,receptor)*>
+<!ATTLIST envio
+    cod ID #REQUIRED
+  >
+<!-- Este DTD ha sido creado por: Francisco Jesús Díaz Martínez -->
+<!ELEMENT emisor (identidad+,num_contrato?,ubicacion+)>
+    <!ELEMENT identidad (#PCDATA)>
+    <!ELEMENT num_contrato (#PCDATA)>
+    <!ATTLIST num_contrato
+     tipo (básico|avanzado|completo) #IMPLIED
+     >
+
+<!-- Dentro del elemento "provincia", que podemos observar dentro de "ubicación" hemos determinado un atributo llamado "pais" al que le hemos
+asignado el valor por defecto "España" . Esto no hace que obligatoriamente siempre sea el valor de este atribudo, pero sí que a falta de que se indique otro
+este es el que tomará -->
+<!ELEMENT ubicacion (via,poblacion,provincia?)> 
+    <!ELEMENT via (#PCDATA)>
+    <!ELEMENT poblacion (#PCDATA)>
+<!ATTLIST poblacion
+    cp CDATA #REQUIRED
+  >
+    <!ELEMENT provincia (#PCDATA)>
+<!ATTLIST provincia
+    pais CDATA #FIXED "España"
+  >
+<!--En el elento definido como "intento" se pueden observar tipos de elementos no terminales
+como por ejemplo el signo "?" que hace que el elemento al que se asocia no sea obligatior, o el signo "*" que indica que el elemento en cuestión
+puede estar presente 0,1 o muchas veces -->
+<!ELEMENT intento (fecha,hora?,comentario*)>
+<!ATTLIST intento
+    recepcionado (sí|no) "no" >
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT hora (#PCDATA)>
+    <!ELEMENT comentario (#PCDATA)>
+
+<!ELEMENT receptor (nombre_completo,ubicacion)>
+    <!ELEMENT nombre_completo (#PCDATA)>
+    <!ATTLIST nombre_completo
+    id NMTOKEN #IMPLIED
+  >

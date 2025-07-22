@@ -1,0 +1,170 @@
+# file: aguadulsoft
+# owner: root
+# group: root
+user::rwx
+user:sifran2023:rwx
+group::r-x
+group:direccion:rwx
+mask::rwx
+other::rwx
+
+# file: aguadulsoft/gestion
+# owner: ggongora
+# group: gestion
+user::rwx
+user:sifran2023:rwx
+user:ggongora:r-x
+user:mmartinez:rwx
+group::rwx
+group:gestion:r-x
+group:direccion:rwx
+mask::rwx
+other::---
+
+# file: aguadulsoft/gestion/arch2.txt
+# owner: ggongora
+# group: gestion
+user::rw-
+user:sifran2023:rw-
+user:ggongora:r-x
+user:mmartinez:r--
+group::---
+group:gestion:r-x
+group:direccion:rwx
+mask::rwx
+other::---
+
+# file: aguadulsoft/gestion/arch1.txt
+# owner: ggongora
+# group: gestion
+user::rw-
+user:sifran2023:rw-
+user:ggongora:r-x
+user:mmartinez:r--
+group::---
+group:gestion:r-x
+group:direccion:rwx
+mask::rwx
+other::---
+
+# file: aguadulsoft/gestion/arch3.txt
+# owner: ggongora
+# group: gestion
+user::rw-
+user:sifran2023:rw-
+user:ggongora:r-x
+user:mmartinez:r--
+group::---
+group:gestion:r-x
+group:direccion:rwx
+mask::rwx
+other::---
+
+# file: aguadulsoft/img1.jpg
+# owner: sifran2023
+# group: sifran2023
+user::rwx
+group::rwx
+other::rwx
+
+# file: aguadulsoft/marketing
+# owner: mmartinez
+# group: marketing
+user::rwx
+user:sifran2023:rwx
+user:ggongora:rwx
+user:mmartinez:r-x
+group::rwx
+group:marketing:r-x
+group:direccion:rwx
+mask::rwx
+other::---
+
+# file: aguadulsoft/marketing/img3.jpg
+# owner: mmartinez
+# group: marketing
+user::rw-
+user:sifran2023:rw-
+user:ggongora:r--
+user:mmartinez:r-x
+group::---
+group:marketing:r-x
+group:direccion:rwx
+mask::rwx
+other::---
+
+# file: aguadulsoft/marketing/img1.jpg
+# owner: mmartinez
+# group: marketing
+user::rw-
+user:sifran2023:rw-
+user:ggongora:r--
+user:mmartinez:r-x
+group::---
+group:marketing:r-x
+group:direccion:rwx
+mask::rwx
+other::---
+
+# file: aguadulsoft/marketing/img2.jpg
+# owner: mmartinez
+# group: marketing
+user::rw-
+user:sifran2023:rw-
+user:ggongora:r--
+user:mmartinez:r-x
+group::---
+group:marketing:r-x
+group:direccion:rwx
+mask::rwx
+other::---
+
+# file: aguadulsoft/direccion
+# owner: sifran2023
+# group: direccion
+user::rwx
+user:sifran2023:rwx
+user:ggongora:---
+user:mmartinez:---
+group::rwx
+group:direccion:r-x
+mask::rwx
+other::---
+
+# file: aguadulsoft/direccion/vid3.wmv
+# owner: sifran2023
+# group: direccion
+user::rw-
+user:sifran2023:rwx
+user:ggongora:---
+user:mmartinez:---
+group::---
+group:direccion:r-x
+mask::rwx
+other::---
+
+# file: aguadulsoft/direccion/vid1.wmv
+# owner: sifran2023
+# group: direccion
+user::rw-
+user:sifran2023:rwx
+user:ggongora:---
+user:mmartinez:---
+group::---
+group:direccion:r-x
+mask::rwx
+other::---
+
+# file: aguadulsoft/direccion/vid2.wmv
+# owner: sifran2023
+# group: direccion
+user::rw-
+user:sifran2023:rwx
+user:ggongora:---
+user:mmartinez:---
+group::---
+group:direccion:r-x
+mask::rwx
+other::---
+
+

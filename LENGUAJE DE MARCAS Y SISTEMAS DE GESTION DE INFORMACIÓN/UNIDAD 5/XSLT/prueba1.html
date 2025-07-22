@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Tarea 5 - LMSGI - Curso 2022-23</title>
+        <style>
+                    table, th, td {
+                    width:500px;
+                    margin: 0 auto;
+                    text-align: center;
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    }
+                    th {
+                    color: white;
+                    background-color:grey;
+                    }
+                    .urgente {
+                    color: red;
+                    background-color:yellow;
+                    }
+                    .nocturno {
+                    color: white;
+                    background-color:black;
+                    }
+                </style>
+    </head>
+    <body>
+        <header>
+            <h2>Lenguaje de Marcas y Sistemas de Gesti&oacute;n de Informaci&oacute;n</h2>
+            <h2>Tarea 5: XPath y XSLT</h2>
+            <h2>Autor/a: Francisco Jes&uacute;s D&iacute;az Mart&iacute;nez</h2>
+        </header>
+        <h3>A. Lista ordenada por precio y apellido de los env&iacute;os a Sevilla. 
+                    Indicar el n&uacute;mero de orden (con n&uacute;mero), el precio, la moneda, el 
+                    apellido y el nombre. El orden ser&aacute; de mayor a menor precio y si 
+                    tienen el mismo precio por orden alfab&eacute;tico de apellido. </h3>
+        <h5>
+            Formato:
+            <br>
+             1) 33 euros - S&aacute;nchez, Carlos.
+        </h5>
+        <br>
+        <br>
+        <envios>
+            1) 5 euros - Delgado, Elena.
+            <br>
+            2) 4 euros - Mart&iacute;n, In&eacute;s.
+            <br>
+            3) 4 euros - Mart&iacute;nez, In&eacute;s.
+            <br>
+            4) 4 euros - Mu&ntilde;oz, Luis.
+            <br>
+            5) 33 euros - S&aacute;nchez, Carlos.
+            <br>
+            6) 26 euros - Fern&aacute;ndez, Noelia.
+            <br>
+            7) 26 euros - Romera, Luis.
+            <br>
+            8) 26 euros - Romero, Isabel.
+            <br>
+            9) 26 euros - S&aacute;nchez, Noelia.
+            <br>
+            10) 23 euros - Cano, Alicia.
+            <br>
+            11) 23 euros - Garc&iacute;a, Jose.
+            <br>
+            12) 23 euros - S&aacute;nchez, In&eacute;s.
+            <br>
+            13) 22 euros - Mart&iacute;nez, Antonio.
+            <br>
+            14) 21 euros - Romera, Elena.
+            <br>
+            15) 19 euros - Garc&iacute;a, Javier.
+            <br>
+            16) 14 euros - Garc&iacute;a, Bel&eacute;n.
+            <br>
+            17) 14 euros - Romera, Daniel.
+            <br>
+            18) 13 euros - Fern&aacute;ndez, Carlos.
+            <br>
+            19) 12 euros - L&oacute;pez, Daniel.
+            <br>
+            20) 12 euros - Mart&iacute;n, Pedro.
+            <br>
+        </envios>
+        <h3>B. N&uacute;mero de env&iacute;os urgentes a C&aacute;diz y su porcentaje respecto al 
+                    total de env&iacute;os a C&aacute;diz</h3>
+        <h5>
+            Formato:
+            <br>
+             Hay 4 env&iacute;os urgentes a C&aacute;diz, que suponen el 28.57% 
+                    de los 14 env&iacute;os totales registrados a C&aacute;diz.
+        </h5>
+        <br>
+        <br>
+        Hay 4 env&iacute;os urgentes a C&aacute;diz, que suponen el 28.57% de los 14 env&iacute;os totales registrados a C&aacute;diz.
+        <h3>C. Lista ordenada (por c&oacute;digo de env&iacute;o) con el tipo de prioridad, 
+                    la provincia, el nombre y el apellido de todos los env&iacute;o cuyo nombre 
+                    comience por 'A' y tengan una prioridad 'Normal', o 
+                    su apellido contenga una 'a' y la provincia sea 'Almer&iacute;a' o 'Granada'.
+                </h3>
+        <h5>
+            Formato:
+            <br>
+             1.- (DBD72R - 24_horas - Granada). Carlos Cano.
+        </h5>
+        <br>
+        <br>
+        <ol>1.-(DBD72R24_horas - Granada). Carlos Cano.</ol>
+        <ol>2.-(GPC51ANormal - C&aacute;diz). Ana Delgado.</ol>
+        <ol>3.-(KEE17JNormal - Granada). Juan Cano.</ol>
+        <ol>4.-(KKW30QUrgente - Almer&iacute;a). Miguel Mart&iacute;n.</ol>
+        <ol>5.-(KOD44DNocturno - Almer&iacute;a). Antonio Diaz.</ol>
+        <ol>6.-(KPG73VNocturno - Almer&iacute;a). Manuel Diaz.</ol>
+        <ol>7.-(KTK88RNormal - Ja&eacute;n). Antonio L&oacute;pez.</ol>
+        <ol>8.-(LAS85VNocturno - Almer&iacute;a). Luis Medina.</ol>
+        <ol>9.-(NMV79KNormal - Almer&iacute;a). Antonio Romero.</ol>
+        <ol>10.-(NVU65DNormal - Sevilla). Antonio Mart&iacute;nez.</ol>
+        <ol>11.-(OGO05B24_horas - Granada). Manuel Delgado.</ol>
+        <ol>12.-(POD34SNocturno - Granada). Antonio Mart&iacute;nez.</ol>
+        <ol>13.-(SMO18G24_horas - Granada). Isabel Garc&iacute;a.</ol>
+        <ol>14.-(TOC16PNormal - Almer&iacute;a). Ana Mart&iacute;nez.</ol>
+        <ol>15.-(TSQ69YNocturno - Almer&iacute;a). Juan Mart&iacute;n.</ol>
+        <ol>16.-(TXI85YUrgente - Granada). Carmen Delgado.</ol>
+        <ol>17.-(VMT46QNocturno - Almer&iacute;a). Beatriz Medina.</ol>
+        <ol>18.-(WPO28JNocturno - Granada). Carlos Diaz.</ol>
+        <h3>D. Lista de todas las provincias (ordenadas alfabeticamente) con su 
+                    n&uacute;mero de env&iacute;os, ingresos totales (suma de todos sus precios) e 
+                    ingreso medio</h3>
+        <h5>
+            Formato:
+            <br>
+             Almer&iacute;a: 11 env&iacute;os. Ingresos totales: 229 euros. 
+                    Ingreso medio: 20.82 euros.
+        </h5>
+        <br>
+        <br>
+        <p>Almer&iacute;a
+                            : 11 env&iacute;os.
+                            Ingresos totales: 229 euros.
+                            Ingreso medio: 20.82 euros.
+                        </p>
+        <p>C&aacute;diz
+                            : 14 env&iacute;os.
+                            Ingresos totales: 264 euros.
+                            Ingreso medio: 18.86 euros.
+                        </p>
+        <p>C&oacute;rdoba
+                            : 11 env&iacute;os.
+                            Ingresos totales: 226 euros.
+                            Ingreso medio: 20.55 euros.
+                        </p>
+        <p>Granada
+                            : 8 env&iacute;os.
+                            Ingresos totales: 172 euros.
+                            Ingreso medio: 21.50 euros.
+                        </p>
+        <p>Huelva
+                            : 12 env&iacute;os.
+                            Ingresos totales: 251 euros.
+                            Ingreso medio: 20.92 euros.
+                        </p>
+        <p>Ja&eacute;n
+                            : 15 env&iacute;os.
+                            Ingresos totales: 263 euros.
+                            Ingreso medio: 17.53 euros.
+                        </p>
+        <p>M&aacute;laga
+                            : 9 env&iacute;os.
+                            Ingresos totales: 157 euros.
+                            Ingreso medio: 17.44 euros.
+                        </p>
+        <p>Sevilla
+                            : 20 env&iacute;os.
+                            Ingresos totales: 350 euros.
+                            Ingreso medio: 17.50 euros.
+                        </p>
+        <h3>E. Crear una tabla, ordenada por fecha de entrega, de los env&iacute;os a 
+                    Almer&iacute;a. La tabla incluir&aacute; las columnas: fecha de entrega, provincia, 
+                    c&oacute;digo de env&iacute;o y prioridad. Estilos: La tabla deber&aacute; usar los estilos 
+                    definidos en la plantilla que se proporciona en el ejercicio. Los 
+                    elementos tabla y las celdas usar&aacute;n los estilos de los selectores 
+                    'table','th' y 'td'. La cabecera usar&aacute; el estilo del selector 'th'. 
+                    Si la prioridad de un env&iacute;o es 'Urgente' esa celda usar&aacute; el estilo del 
+                    selector '.urgente'. Si la prioridad de un env&iacute;o es 'Nocturno' esa 
+                    celda usar&aacute; el estilo del selector '.nocturno'.</h3>
+        <h5>Formato:</h5>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th><th>Provincia</th><th>C&oacute;digo de env&iacute;o</th><th>Prioridad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023-02-03</td><td>Almer&iacute;a</td><td>NMV79K</td><td class="Normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>2023-02-04</td><td>Almer&iacute;a</td><td>KKW30Q</td><td class="Urgente">Urgente</td>
+                </tr>
+                <tr>
+                    <td>2023-02-10</td><td>Almer&iacute;a</td><td>VMT46Q</td><td class="Nocturno">Nocturno</td>
+                </tr>
+                <tr>
+                    <td>2023-02-10</td><td>Almer&iacute;a</td><td>TSQ69Y</td><td class="Nocturno">Nocturno</td>
+                </tr>
+                <tr>
+                    <td>2023-02-12</td><td>Almer&iacute;a</td><td>LAS85V</td><td class="Nocturno">Nocturno</td>
+                </tr>
+                <tr>
+                    <td>2023-02-13</td><td>Almer&iacute;a</td><td>YES47W</td><td class="24_horas">24_horas</td>
+                </tr>
+                <tr>
+                    <td>2023-02-13</td><td>Almer&iacute;a</td><td>TOC16P</td><td class="Normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>2023-02-19</td><td>Almer&iacute;a</td><td>KPG73V</td><td class="Nocturno">Nocturno</td>
+                </tr>
+                <tr>
+                    <td>2023-02-21</td><td>Almer&iacute;a</td><td>KOD44D</td><td class="Nocturno">Nocturno</td>
+                </tr>
+                <tr>
+                    <td>2023-02-27</td><td>Almer&iacute;a</td><td>GOA55D</td><td class="Urgente">Urgente</td>
+                </tr>
+                <tr>
+                    <td>2023-02-28</td><td>Almer&iacute;a</td><td>JED69T</td><td class="Urgente">Urgente</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+    </body>
+</html>

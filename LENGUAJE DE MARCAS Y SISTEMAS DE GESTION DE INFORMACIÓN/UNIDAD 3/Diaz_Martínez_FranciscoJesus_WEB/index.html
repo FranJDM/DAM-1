@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>LlegaYa</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Enlace al archivo css -->
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+    <header class="encabezado"> 
+        <div class="logotipo"><img src="./img/logo.png" alt="Logo de LlegaYa"></div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contenido">
+        <section id="inicio" class="inicio">
+            <div class="banner_box"><img src="./img/banner.svg" alt="banner" class="banner"></div>
+            <div>
+                <div class="presentacion">
+                    <p>Nuestra empresa ofrece servicios de reparto a nivel nacional, con rapidez, eficiencia y
+                        seguridad. Ofrecemos una amplia variedad de opciones de entrega para adaptarnos a las
+                        necesidades de nuestros clientes. Te garantizamos que tus envíos llegarán a su destino en
+                        perfecto estado. Contáctanos hoy mismo para más información sobre cómo podemos ayudarte con tus
+                        necesidades de reparto.</p>
+                    <p>
+                        Horarios de atención al público:
+                    <ul>
+                        <li>Mañana: 10 a 14h (L-S)</li>
+                        <li>Tarde: 17 a 21h (L-V)</li>
+                    </ul>
+                    </p>
+                </div>
+                <!-- Desarrollo de la lista de servicios --> 
+                <ol class="lista_ordenada">
+                    <li>
+                        Servicios
+                        <ol>
+                            <li>Servicio urgente</li>
+                            <li>Servicio de transporte sectorial</li>
+                            <li>Servicios especiales a medida</li>
+                            <li>Servicio de entrega en taquillas</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Productos
+                        <ol>
+                            <li>Paquetes</li>
+                            <li>Sobres</li>
+                            <li>Papel de burbujas</li>
+                            <li>Neveras aislantes</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section id="servicios" class="servicios">
+            <h1>Servicios / Productos</h1>
+            <!-- Desarrollo de la galeria de fotos --> 
+            <div class="galeria">
+                <article class="galeria_img">
+                    <img src="./img/urgente.jpg" alt="">
+                    <div>Servicios de transporte urgente</div>
+                </article>
+                <article class="galeria_img">
+                    <img src="./img/sectorial.jpg" alt="">
+                    <div>Servicios de transporte sectoriales</div>
+                </article>
+                <article class="galeria_img">
+                    <img src="./img/medida.jpg" alt="">
+                    <div>Servicios especiales a medida</div>
+                </article>
+                <article class="galeria_img">
+                    <img src="./img/taquilla.jpg" alt="">
+                    <div>Servicio de entrega en taquillas</div>
+                </article>
+                <article class="galeria_img">
+                    <img src="./img/paquete.jpg" alt="">
+                    <div>Paquetes</div>
+                </article>
+                <article class="galeria_img">
+                    <img src="./img/sobre.jpg" alt="">
+                    <div>Sobres</div>
+                </article>
+                <article class="galeria_img">
+                    <img src="./img/burbujas.jpg" alt="">
+                    <div>Papel de burbujas</div>
+                </article>
+                <article class="galeria_img">
+                    <img src="./img/nevera.jpg" alt="">
+                    <div>Neveras aislantes</div>
+                </article>
+            </div>
+        </section>
+        <section id="contacto" class="contacto">
+            <form action="">
+                <h2>Formulario de contacto</h2>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" value="">
+                </div>
+                <div>
+                    <label for="email">e-mail:</label>
+                    <input type="email" id="email" name="email" value="">
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" value="">
+                </div>
+                <div>
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" value="">
+                </div>
+                <div>
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios" value=""></textarea>
+                </div>
+                <span class="respuesta">
+                    <label for="respuesta">Desea recibir respuesta por:</label>
+                    <span><input type="radio" name="respuesta" id="r_email"> e-mail</span>
+                    <span><input type="radio" name="respuesta" id="r_telefono"> Teléfono</span>
+                </span>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="pie">
+        <section class="datos_empresa">
+            <h2>LlegaYa, SL.</h2>
+            <address>Calle Antón Gutiérrez, 49 Bajo <br />
+                14900 Lucena (Córdoba) </address>
+                <!-- Hiperlinks para los datos de contacto --> 
+            <a href="tel:+34691075998">Tlf. +34 691 075 998 </a>
+            <a href="mailto:llegaya@gmail.com">llegaya@gmail.com</a>
+        </section>
+
+        <section class="canales_rss_atom">
+            <a type="application/rss+xml" href="feed/canal.rss">
+                <img src="./img/rss.png" alt="Logo RSS">
+              </a>
+              <a type="application/rss+xml" href="feed/canal.atom">
+                <img src="./img/atom.png" alt="Logo Atom">
+              </a>
+        </section>
+        <section class="autora"> 
+            <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/legalcode.es" target="_blank">
+                <img src="./img/by.png" alt="creative commons">
+            </a>
+            Diseñado y desarrollado por Adriana Bellido Serrán </section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* COLORES */
+
+:root {
+    --principal: #2D80B6;
+    --emphasis: #C7DE3C;
+    --neutro: #F0F0F0;
+    --light: #F9F9F9;
+    --dark: #0b2641;
+}
+
+body {
+    background-color: var(--light);
+    width: 100%;
+}
+
+body>* {
+    width: 100%;
+    font-family: 'cuerpo', sans-serif;
+}
+
+/* FUENTES */
+
+@font-face {
+    font-family: 'titulo';
+    src: url("./fonts/alegreya.ttf");
+}
+
+@font-face {
+    font-family: 'cuerpo';
+    src: url("../fonts/opensans.ttf");
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: 'titulo', sans-serif;
+}
+
+/************************ CAPA ENCABEZADO ************************/
+header.encabezado {
+    background-color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    height: 20vh;
+}
+
+/***** CAPA LOGOTIPO *****/
+
+div.logotipo img {
+    height: 100%;
+    padding: 15px;
+    margin-left: 50px;
+}
+
+/***** CAPA MENÚ *****/
+nav.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+    margin-right: 5%;
+}
+
+nav.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.menu ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    width: 130px;
+    padding: 5px;
+    border: 2px solid var(--emphasis);
+    border-radius: 10px;
+}
+
+.menu ul li:hover {
+    background-color: var(--emphasis);
+    border: 2px solid var(--dark);
+}
+
+.menu ul li a {
+    font-family: 'titulo', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul li:hover a {
+    color: #0b2641;
+}
+
+/************************ CAPA CONTENIDO ************************/
+main.contenido {
+    height: 90vh;
+    overflow: hidden;
+}
+
+/***** CAPA INICIO *****/
+.inicio {
+    background-color: var(--neutro);
+    height: 90vh;
+}
+
+.banner {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.banner_box {
+    background-color: var(--emphasis);
+}
+
+.inicio>div {
+    display: flex;
+    align-items: center;
+}
+
+.presentacion {
+    width: 60%;
+    padding: 50px;
+    font-size: 1.2rem;
+    max-width: 75ch;
+}
+
+.presentacion p {
+    margin: 1rem 0;
+}
+
+.presentacion ul {
+    padding-left: 50px;
+}
+
+.presentacion ul li {
+    margin: 0.5rem 0;
+}
+
+/* Lista ordenada a dos niveles */
+
+ol.lista_ordenada {
+    width: 40%;
+    padding: 50px;
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+ol.lista_ordenada>li {
+    list-style: none;
+    counter-increment: num;
+}
+
+ol.lista_ordenada>li:before {
+    content: counter(num) ". ";
+}
+
+ol.lista_ordenada>li>ol {
+    list-style-type: none;
+}
+
+ol.lista_ordenada>li>ol>li {
+    list-style: none;
+    counter-increment: subNum;
+    text-indent: -65px;
+    padding-left: 65px
+}
+
+ol.lista_ordenada>li>ol>li:before {
+    padding-left: 30px;
+    content: counter(num) "." counter(subNum, lower-alpha) ". ";
+}
+
+/***** CAPA SERVICIOS *****/
+.servicios {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--neutro);
+    height: 90vh;
+}
+
+/* Galería */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 320px);
+    width: 90%;
+    margin-top: 2rem;
+}
+
+.galeria_img {
+    position: relative;
+    margin: 20px;
+}
+
+.galeria_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%);
+}
+
+.galeria_img img:hover {
+    filter: grayscale(0%);
+}
+
+.galeria_img div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffffd0;
+    text-align: center;
+    padding: 5px;
+}
+
+/***** CAPA CONTACTO *****/
+.contacto {
+    background-color: var(--neutro);
+    height: 90vh;
+    padding: 5rem;
+}
+
+form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark);
+    padding: 4rem 2rem;
+    margin: 2rem 30%;
+    border-radius: 10px;
+}
+
+form input {
+    font-family: 'cuerpo', sans-serif;
+    padding: 1.3em;
+    height: 2em;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    font-family: 'cuerpo', sans-serif;
+    height: 8rem;
+    padding: 0.8em 1.3em;
+    border-radius: 5px;
+    resize: none;
+    font-size: 1rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.respuesta {
+    margin: 0.5rem 0;
+}
+
+.respuesta span {
+    display: block;
+    margin: 0 0.5rem;
+}
+
+button {
+    height: 5rem;
+    width: 10rem;
+    padding: 0.8rem;
+    border: 1px solid #fefefed3;
+    border-radius: 25px;
+    box-shadow: 1px 3px 7px rgba(51, 45, 65, 0.3);
+    color: #fefefe;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    touch-action: manipulation;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right,
+            var(--dark),
+            var(--principal),
+            var(--light),
+            #f4ffc4,
+            #d2ff58,
+            var(--emphasis));
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+button:hover,
+button:active {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+    color: rgba(51, 51, 51, 0.87);
+}
+
+button:active {
+    outline: none;
+    background-color: #fefefe;
+    box-shadow: 1px 3px 7px rgba(45, 54, 65, 0.50) inset;
+}
+
+/************************ CAPA PIE ************************/
+footer.pie {
+    text-align: center;
+    background-color: var(--dark);
+    color: white;
+    padding: 20px 0;
+}
+
+.pie section {
+    margin: 1rem auto;
+}
+
+.pie p {
+    padding: 0.5rem 0;
+}
+
+.pie a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.pie a:hover {
+    color: var(--emphasis);
+}
+
+.datos_empresa h2 {
+    color: var(--emphasis);
+    font-size: 3rem;
+}
+
+.autora {
+    font-size: 0.8rem;
+}
+
+.autora img {
+    display: inline-block;
+    width: 100px;
+}
+
+
+
+.canales_rss_atom {
+    display: flex;
+    justify-content: center;
+  }
+  .canales_rss_atom a {
+    margin: 0 10px;
+  }
+  .canales_rss_atom img {
+    height: 100px;
+   width: 100px;
+  }

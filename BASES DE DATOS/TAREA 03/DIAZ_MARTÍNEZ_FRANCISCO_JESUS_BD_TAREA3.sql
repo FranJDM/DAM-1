@@ -1,0 +1,78 @@
+CREATE DATABASE IF NOT EXISTS airbnbalmeria;
+USE  airbnbalmeria;
+
+
+CREATE TABLE IF NOT EXISTS cliente (
+    DNI CHAR(9) PRIMARY KEY,
+    nombre VARCHAR(30),
+    apellidos VARCHAR(30),
+    teléfono CHAR(10),
+    numTarjeta CHAR(16) NOT NULL,
+    f_Nac DATE
+);
+
+CREATE TABLE IF NOT EXISTS mantenimiento (
+    CIF CHAR(9) PRIMARY KEY,
+    nombre VARCHAR(70) /* HE OPTADO POR UN VALOR MAYOR PARA QUE SE PUEDA PONER UN NOMBRE COMPLETO EN EL MISMO CAMPO*/,
+    responsable VARCHAR(70) /* HE OPTADO POR UN VALOR MAYOR PARA QUE SE PUEDA PONER UN NOMBRE COMPLETO EN EL MISMO CAMPO*/,
+    numEmpleados TINYINT(2),
+    razonSocial VARCHAR(30)
+);
+
+CREATE TABLE IF NOT EXISTS propietario (
+    DNI CHAR(9) PRIMARY KEY,
+    nombre VARCHAR(30),
+    apellidos VARCHAR(40),
+    numCuenta CHAR(24) UNIQUE /*SE HA ESPECIFICADO 24 CARACTERES PORQUE SON LOS QUE COMPONEN EL IBAN*/,
+    beneficio DECIMAL(4 , 2 ) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS vivienda (
+    referencia CHAR(9) PRIMARY KEY,
+    direccion_vivienda VARCHAR(40),
+    localidad VARCHAR(30),
+    provincia VARCHAR(30),
+    n_habitaciones TINYINT(1) DEFAULT 1,
+    n_camas TINYINT(1) DEFAULT 1,
+    n_aseos TINYINT(1) DEFAULT 1,
+    metros2 VARCHAR(3),
+    precioDia DECIMAL(3 , 2 ) /*SE HA ESPECIFICADO UN TIPO DECIMAL SUPONIENDO QUE LA CIFRA SERÁ DEL FORMATO XXX,XX €*/,
+    CIF_mantenimiento CHAR(9),
+    DNI_propietario CHAR(9),
+    CONSTRAINT VI_PDIA_CK CHECK (precioDia >20 AND precioDia <100),
+    CONSTRAINT VI_CIFMANT_FK FOREIGN KEY (CIF_mantenimiento) REFERENCES mantenimiento (CIF) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT VI_DNIPROP_FK FOREIGN KEY (DNI_propietario) REFERENCES propietario  (DNI) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS reserva (
+    refViv CHAR(3),
+    DNI_cliente CHAR(9),
+    f_ENT DATE,
+    f_SAL DATE,
+    precioTotal DECIMAL(3 , 2 ),
+    cantidadPersonas CHAR(2),
+    PRIMARY KEY (refViv,DNI_cliente,f_ent),
+    CONSTRAINT RE_SAL_ENT CHECK (f_SAL>f_ENT),
+    CONSTRAINT RE_REFVIV_FK FOREIGN KEY (refViv) REFERENCES vivienda (referencia) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT RE_DNICLI_FK FOREIGN KEY (DNI_cliente) REFERENCES cliente (DNI) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE VIEW VIVIENDAS_ALMERIA AS
+SELECT * FROM vivienda
+WHERE provincia = 'Almería';
+
+ALTER TABLE reserva
+ADD fechaRes DATETIME;
+
+ALTER TABLE propietario 
+CHANGE numCuenta IBAN CHAR(24);
+
+ALTER TABLE mantenimiento
+ADD INDEX nuevo (nombre);
+
+CREATE USER agente@'%' IDENTIFIED BY 'ag123';
+
+GRANT SELECT ON airbnbalmeria.reserva TO agente@'%';
+
+
+
